@@ -3,7 +3,8 @@
 Route::get('logout', 'UserController@logout')->name('logout');
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/', 'HomeController@home')->name('home');
+    // Route::get('/', 'HomeController@home')->name('home');
+    Route::get('/', 'TeamController@login')->name('home');
     Route::get('team/login', 'TeamController@login')->name('team.login');
     Route::post('team/login', 'TeamController@postLogin')->name('team.postlogin');
     Route::get('team/create', 'TeamController@create')->name('team.create');
