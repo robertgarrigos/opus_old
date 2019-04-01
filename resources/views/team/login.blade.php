@@ -48,7 +48,6 @@
 		            </div>
 		        </form>
 			</div>
-			<p class="text-center" style="font-size: 14px;"><span class="text-muted" style="margin-left: 15px;">Don't have a team?</span> <a href="{{ route('team.create') }}">Create now</a>.</p>
 		</div>
 	</div>
 @endsection()
