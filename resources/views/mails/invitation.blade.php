@@ -79,7 +79,7 @@
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             
                                             <tr>
-                                                <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; color: #666666;" class="padding-copy">You are invited to join the {{ $ }}team->name }} Wiki. Click on the below link and register yourself on the wiki to join this team.</td>
+                                                <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; color: #666666;" class="padding-copy">You are invited to join the {{ $team->name }} Wiki. Click on the below link and register yourself on the wiki to join this team.</td>
                                             </tr>
                                         </table>
                                     </td>
