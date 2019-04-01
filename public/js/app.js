@@ -125,7 +125,7 @@ var App = {
             }
         });
     },
-    initCKEditor() {
+    initCKEditor() { // TODO: Add image uploads, Opus did not come with this out of the box.
         if ($('#wiki-description').length) {
 
             CKEDITOR.replace('wiki-description', {
@@ -134,7 +134,7 @@ var App = {
                 height: $('#wiki-description').data('height'),
                 enableTabKeyTools: true,
                 removePlugins: 'elementspath',
-                extraPlugins: 'codesnippet',
+                extraPlugins: ['codesnippet', 'filebrowser'],
                 codeSnippet_theme: 'github',
                 resize_enabled: false,
                 uiColor: '#eeeeee',
