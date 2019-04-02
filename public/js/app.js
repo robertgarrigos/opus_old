@@ -142,17 +142,17 @@ var App = {
                     {name: 'justify3', items: ['Format']},
                     {
                         name: 'clipboard',
-                        items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Bold', 'Italic', 'Underline', 'Strike']
+                        items: ['PasteFromWord', '-', 'Bold', 'Italic', 'Underline', 'Strike']
                     },
                     {
                         name: 'colors',
-                        items: ['TextColor', 'BGColor', 'RemoveFormat', 'SelectAll', '-', 'NumberedList', 'BulletedList']
+                        items: ['TextColor', 'BGColor', 'RemoveFormat', '-', 'NumberedList', 'BulletedList']
                     },
-                    {name: 'justify', items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
-                    {name: 'insert', items: ['Table', 'HorizontalRule', 'PageBreak', '-', 'Link', 'Iframe']},
-                    {name: 'editing', items: ['SpellCheck', '-', 'Find', 'Replace',]},
+                    {name: 'justify', items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight']},
+                    {name: 'insert', items: ['Table', 'HorizontalRule', '-', 'Link', 'Iframe']},
+                    {name: 'editing', items: ['SpellCheck']},
                     {name: 'paragraph', items: ['-', 'Outdent', 'Indent']},
-                    {name: 'justify2', items: ['CodeSnippet', 'Source', 'Maximize', '-', 'Undo', 'Redo']},
+                    {name: 'justify2', items: ['CodeSnippet', 'Source', '-', 'Undo', 'Redo']},
                 ]
             });
         }
