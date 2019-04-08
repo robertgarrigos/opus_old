@@ -82,7 +82,8 @@
     "platform": {
         "ext-pcntl": "7.2",
         "ext-posix": "7.2",
-        "ext-iconv": "7.2"
+        "ext-iconv": "7.2",
+        "ext-bcmath": "7.2"
     }
   },
   "repositories": [
