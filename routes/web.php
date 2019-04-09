@@ -143,3 +143,7 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
     });
 
 });
+
+Route::group(['prefix' => 'uploader', 'as' => 'uploader.', 'middleware' => 'auth'], function () {
+    Route::post('upload', 'FileController@store')->name('upload');
+});

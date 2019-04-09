@@ -126,7 +126,7 @@ var App = {
         });
     },
     initCKEditor() { // TODO: Add image uploads, Opus did not come with this out of the box.
-        if ($('#wiki-description').length) {
+        if ($('#wiki-description').length) {			
 
             CKEDITOR.replace('wiki-description', {
                 width: "100%",
@@ -134,7 +134,7 @@ var App = {
                 height: $('#wiki-description').data('height'),
                 enableTabKeyTools: true,
                 removePlugins: 'elementspath',
-                extraPlugins: 'codesnippet',
+                extraPlugins: 'codesnippet,filetools,uploadwidget,image2,uploadimage,notification,notificationaggregator',
                 codeSnippet_theme: 'github',
                 resize_enabled: false,
                 uiColor: '#eeeeee',
@@ -149,11 +149,15 @@ var App = {
                         items: ['TextColor', 'BGColor', 'RemoveFormat', '-', 'NumberedList', 'BulletedList']
                     },
                     {name: 'justify', items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight']},
-                    {name: 'insert', items: ['Table', 'HorizontalRule', '-', 'Link', 'Iframe']},
+                    {name: 'insert', items: ['Image', 'Table', 'HorizontalRule', '-', 'Link', 'Iframe']},
                     {name: 'editing', items: ['SpellCheck']},
                     {name: 'paragraph', items: ['-', 'Outdent', 'Indent']},
                     {name: 'justify2', items: ['CodeSnippet', 'Source', '-', 'Undo', 'Redo']},
-                ]
+                ],
+                // TODO: Must finish this!
+                filebrowserUploadUrl: '/uploader/upload',
+                filebrowserImageUploadUrl: '/uploader/upload?type=Image',
+                // uploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
             });
         }
     },
