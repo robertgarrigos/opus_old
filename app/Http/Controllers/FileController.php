@@ -19,16 +19,19 @@ class FileController extends Controller
                 $filename = $file->getClientOriginalName();
                 $file->move(storage_path().'/app/public/images/', $filename);
                 $url = public_path() .'/app/public/images/' . $filename;
+                $success = 1;
             } else {
                 $message = 'An error occured while uploading the file.';
+                $success = 0;
             }
         } else {
             $message = 'No file uploaded.';
+            $success = 0;
         }
 
         $data = [
             'fileName' => $filename,
-            'uploaded' => 1,
+            'uploaded' => $success,
             'url' => url("storage/images/$filename"),
         ];
         
