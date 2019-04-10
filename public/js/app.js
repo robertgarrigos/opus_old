@@ -156,7 +156,7 @@ var App = {
                 ],
                 // TODO: Must finish this!
                 filebrowserUploadUrl: '/uploader/upload',
-                filebrowserImageUploadUrl: '/uploader/upload?type=Image',
+                filebrowserImageUploadUrl: '/uploader/upload',
                 // uploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
             });
         }
