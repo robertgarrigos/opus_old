@@ -9,23 +9,16 @@ class FileController extends Controller
 {
     public function store(Request $request)
     {
-        $CKEditor = Input::get('CKEditor');
-        $funcNum = Input::get('CKEditorFuncNum');
-        $message = $url = '';
-
         if (Input::hasFile('upload')) {
             $file = Input::file('upload');
             if ($file->isValid()) {
                 $filename = $file->getClientOriginalName();
                 $file->move(storage_path().'/app/public/images/', $filename);
-                $url = public_path() .'/app/public/images/' . $filename;
                 $success = 1;
             } else {
-                $message = 'An error occured while uploading the file.';
                 $success = 0;
             }
         } else {
-            $message = 'No file uploaded.';
             $success = 0;
         }
 
