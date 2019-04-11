@@ -1170,6 +1170,10 @@ blockquote {
     margin: 0;
 }
 
+.markdown-body a {
+	color: #337ab7;
+}
+
 .markdown-body b, .markdown-body strong {
 	font-weight: 500;
 }
