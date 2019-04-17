@@ -67,6 +67,8 @@ class PageController extends Controller
 
     public function index(Team $team, Space $space, Wiki $wiki)
     {
+        $page = $wiki->pages->first();
+
         $isPageInReadList = ReadList::where('user_id', Auth::user()->id)->where('subject_id', $page->id)->where('subject_type', Page::class)->first();
 
         $pageTags = $this->page->find($page->id)->tags()->get();
@@ -84,8 +86,6 @@ class PageController extends Controller
                 $isUserLikePage = true;
             }
         }
-
-        $page = $wiki->pages->first();
 
         return view('page.index', compact('team', 'pageTags', 'page', 'wiki', 'space', 'isUserLikeWiki', 'isUserLikePage', 'isPageInReadList'));
     }
