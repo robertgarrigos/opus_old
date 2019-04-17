@@ -132,6 +132,7 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
         Route::delete('{wiki_slug}/pages/{page_slug}', 'PageController@destroy')->name('pages.destroy');
         Route::get('{wiki_slug}/pages/{page_slug}/edit', 'PageController@edit')->name('pages.edit');
         Route::post('{wiki_slug}/pages', 'PageController@store')->name('pages.store');
+        Route::get('{wiki_slug}/pages', 'PageController@index');
         Route::get('{wiki_slug}/edit', 'WikiController@edit')->name('wikis.edit');
         Route::patch('{wiki_slug}/pages/{page_slug}', 'PageController@update')->name('pages.update');
         Route::get('{wiki_slug}/pages/{page_slug}/settings', 'PageController@setting')->name('pages.settings');
